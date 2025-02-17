@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ROSH WATCHES - Luxury Timepieces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+     
         body, html {
             height: 100%;
             margin: 0;
         }
 
         body {
-            background: url('clock2.jpg') no-repeat center center fixed;
+            background: url('clock2.jpg') no-repeat center center fixed; 
             background-size: cover;
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -30,6 +31,7 @@
             flex: 1;
         }
 
+        
         .navbar {
             background-color: #121212;
             padding: 15px 20px;
@@ -58,94 +60,15 @@
             color: #ffcc00 !important;
             transform: scale(1.1);
         }
-
-        .nav-link.active {
-            color: #ffcc00 !important;
-            font-weight: bold;
-            border-bottom: 2px solid #ffcc00;
+        .btn-primary, .btn-danger {
+            font-size: 1.2rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 94, 0, 0.5);
+            background: linear-gradient(to right, #ff3300, #e91111);
         }
-        .facts {
-            background-color: #f8f9fa;
-            color: #121212;
-            padding: 50px 0;
-        }
-
-        .fact-box {
-            background: linear-gradient(to bottom right, #ffcc00, #ff9900);
-            color: #121212;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .fact-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .fact-box h5 {
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .fact-box p {
-            color: #ffffff;
-            font-size: 1rem;
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: url('watch-banner.jpg') no-repeat center center/cover;
-            position: relative;
-            padding: 100px 20px;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            color: #ffcc00;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-        }
-
-        .hero p {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #f5f5f5;
-        }
-
+        
         .btn-primary {
             background: linear-gradient(to right, #ffcc00, #ff9900);
             color: #121212;
@@ -162,9 +85,15 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(255, 204, 0, 0.7);
         }
-
+        .table {
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
         footer {
-            background-color: #121212;
+            background-color: #343a40;
             color: #f5f5f5;
             text-align: center;
             padding: 10px;
@@ -182,7 +111,7 @@
         }
 
         .footer-icon {
-            font-size: 1.5rem;
+            font-size: 1.5rem; 
             margin: 0 10px;
             transition: transform 0.3s ease;
         }
@@ -190,11 +119,17 @@
         .footer-icon:hover {
             transform: scale(1.2);
         }
+        .nav-link.active {
+        color: #ffcc00 !important;
+        font-weight: bold;
+        border-bottom: 2px solid #ffcc00;
+        }
     </style>
 </head>
 <body>
     <div class="content">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.html">ROSH WATCHES</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -202,94 +137,46 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="cart.html">Cart</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <section class="hero main-content">
-            <div class="hero-content">
-                <h1>Timeless Elegance</h1>
-                <p>Luxury watches crafted to define your moments.</p>
-                <a href="shop.html" class="btn btn-primary">Explore Collection</a>
-            </div>
-        </section>
-        <section class="facts">
-            <div class="container text-center">
-                <h2 class="mb-4">Interesting Facts About Watches</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="fact-box">
-                            <h5>Historical Significance</h5>
-                            <p>The first wristwatch was created in 1868 for a Hungarian countess.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="fact-box">
-                            <h5>World Record</h5>
-                            <p>The most expensive watch ever sold was auctioned for $31 million!</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="fact-box">
-                            <h5>Precision Engineering</h5>
-                            <p>Atomic clocks are so precise, they lose only 1 second every 100 million years.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-5 text-light" style="background-color: #121212;">
-            <div class="container text-center">
-                <h2 class="mb-4">What Our Customers Say</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card border-0 bg-dark text-light">
-                            <div class="card-body">
-                                <p class="card-text">"The watch is stunning and the quality is exceptional!"</p>
-                                <p>- Sarah W.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 bg-dark text-light">
-                            <div class="card-body">
-                                <p class="card-text">"A perfect blend of elegance and functionality. I love it!"</p>
-                                <p>- John D.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 bg-dark text-light">
-                            <div class="card-body">
-                                <p class="card-text">"I get compliments on my watch wherever I go. Totally worth it."</p>
-                                <p>- Emily R.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="py-5" style="background-color: #ffcc00;">
-            <div class="container text-center">
-                <h2 class="mb-3">Stay Updated</h2>
-                <p>Subscribe to our newsletter to receive updates on new collections and offers!</p>
-                <form class="row g-2 justify-content-center">
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Enter your email">
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-dark">Subscribe</button>
-                    </div>
-                </form>
+        <div class="container my-4 main-content">
+            <h2 class="text-center">Your Cart</h2>
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr><td colspan="5" class="text-center">Your cart is empty.</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Total:</td>
+                        <td id="total-cart-price" class="fw-bold">₹0.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-center">
+                <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+                <button class="btn btn-primary" id="checkout">Proceed to Checkout</button>
             </div>
-        </section>
+        </div>
 
+        
         <footer>
             <div class="container">
                 <div class="row">
@@ -315,6 +202,24 @@
             </div>
         </footer>
     </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        loadCart();
+
+        document.getElementById("checkout").addEventListener("click", function() {
+            
+            window.location.href = "checkout.html"; 
+        });
+
+        document.getElementById("clear-cart").addEventListener("click", function() {
+           
+            localStorage.removeItem("cartItems");
+            loadCart();
+        });
+    });
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
