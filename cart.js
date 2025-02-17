@@ -1,10 +1,10 @@
-// Load cart items and display them in the cart table
+
 function loadCart() {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     const cartTableBody = document.getElementById("cart-items");
     const totalCartPrice = document.getElementById("total-cart-price");
 
-    cartTableBody.innerHTML = ""; // Clear existing rows
+    cartTableBody.innerHTML = "";
 
     if (cartItems.length === 0) {
         cartTableBody.innerHTML = '<tr><td colspan="5" class="text-center">Your cart is empty.</td></tr>';
@@ -38,7 +38,7 @@ function loadCart() {
     totalCartPrice.textContent = `₹${totalPrice.toFixed(2)}`;
 }
 
-// Update item quantity in the cart
+
 function updateQuantity(index, change) {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems[index].quantity += change;
@@ -48,25 +48,24 @@ function updateQuantity(index, change) {
     }
 
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    loadCart(); // Refresh cart
+    loadCart();
 }
 
-// Remove an item from the cart
+
 function removeFromCart(index) {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems.splice(index, 1);
 
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    loadCart(); // Refresh cart
+    loadCart(); 
 }
 
-// Clear the entire cart
 document.getElementById("clear-cart").addEventListener("click", function () {
     localStorage.removeItem("cartItems");
-    loadCart(); // Refresh cart
+    loadCart();
 });
 
-// Proceed to checkout
+
 document.getElementById("checkout").addEventListener("click", function () {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -75,9 +74,7 @@ document.getElementById("checkout").addEventListener("click", function () {
         return;
     }
 
-    // Save cart items for checkout page
     localStorage.setItem("checkoutItems", JSON.stringify(cartItems));
 
-    // Redirect to the checkout page
     window.location.href = "checkout.html";
 });
